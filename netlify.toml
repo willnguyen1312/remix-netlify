@@ -1,6 +1,11 @@
 [build]
   functions = "netlify/functions"
   publish = "public"
+  command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
+
+[build.environment]
+  NPM_FLAGS = "--prefix=/dev/null"
+  NODE_VERSION = "16"
 
 [dev]
   functions = "netlify/functions"
