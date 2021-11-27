@@ -1,7 +1,7 @@
 [build]
   functions = "netlify/functions"
   publish = "public"
-  command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
+  command = "npx pnpm i --force --store=node_modules/.pnpm-store && npx pnpm run build"
 
 [build.environment]
   NPM_FLAGS = "--prefix=/dev/null"
